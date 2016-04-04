@@ -1,0 +1,14 @@
+main.o: main.c avi/avi.h main.h utils.h vector.h motion.h average.h \
+ resample.h
+vector.o: vector.c vector.h utils.h
+resample.o: resample.c resample.h vector.h utils.h
+utils.o: utils.c utils.h
+motion.o: motion.c main.h motion.h average.h vector.h utils.h
+average.o: average.c average.h
+avi.o: avi/avi.c avi/avi.h avi/avi_intern.h avi/endian.h
+avirgb.o: avi/avirgb.c avi/avi.h avi/avirgb.h
+codecs.o: avi/codecs.c avi/avi.h avi/avi_intern.h avi/avirgb.h \
+ avi/mjpeg.h
+endian.o: avi/endian.c avi/avi.h avi/endian.h avi/avi_intern.h
+mjpeg.o: avi/mjpeg.c avi/avi.h avi/mjpeg.h
+options.o: avi/options.c avi/avi.h avi/avi_intern.h avi/endian.h
